@@ -4,6 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'add-todo/:id', loadChildren: './pages/add-todo/add-todo.module#AddTodoPageModule' },
+  { path: 'add-todo', loadChildren: './pages/add-todo/add-todo.module#AddTodoPageModule' },
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
 {
   "name": "todoSql",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

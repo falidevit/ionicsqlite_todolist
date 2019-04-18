@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="Taches" [(ngModel)]="newTodo.task"></ion-input>
+    </ion-item>
+    <ion-item>
+       <ion-label>Statuts</ion-label>
+        <ion-select value="To Do" [(ngModel)]="newTodo.status" okText="Valider" cancelText="Annuler">
+          <ion-select-option value="Todo">Todo</ion-select-option>
+          <ion-select-option value="Doing">Doing</ion-select-option>
+          <ion-select-option value="Done">Done</ion-select-option>
+       </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="addTodo()">Enregistrer</ion-button>
+</ion-content>
